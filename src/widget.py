@@ -1,4 +1,4 @@
-from src.masks import get_mask_card_number, get_mask_account
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(card_info: str) -> str:
@@ -25,17 +25,5 @@ def mask_account_card(card_info: str) -> str:
 def get_date(input_data: str) -> str:
     """Функция, которая меняет формат получаемой даты на "ДД.ММ.ГГГГ" """
     data_list = input_data.split("T")[0]
-    formatted_data = f'{data_list[-2:]}.{data_list[5:7]}.{data_list[:4]}'
+    formatted_data = f"{data_list[-2:]}.{data_list[5:7]}.{data_list[:4]}"
     return formatted_data
-
-
-
-
-
-
-
-
-
-
-
-
